@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LoginMain.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <img class="img-fluid d-block mx-auto" src="~/CMS BILLEDER/LOGIN.png" />
+            <div class="loginwrap d-block mx-auto">
+                <form class="text-center" method="post" action="/Login/Index/">
+                    <input type="text" class="input1" name="Username" placeholder="Brugernavn" />
+                    <br />
+                    <input type="password" class="input2" name="Password" placeholder="Kodeord" />
+                    <br />
+                    <a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a>
+                    <button class="btn knap2" type="submit">Login</button>
+                    <br />
+                    @Html.Raw(ViewBag.Msg)
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD20BD53-58B0-47CA-BE50-554511DCE754}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TinyCMS</RootNamespace>
+    <AssemblyName>TinyCMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMS BILLEDER\blue_white_spots_background_65560_1920x1080.jpg" />
+    <Content Include="CMS BILLEDER\cms1.png" />
+    <Content Include="CMS BILLEDER\LOGIN.png" />
+    <Content Include="CMS BILLEDER\to_the_sea-wallpaper-1920x1080.jpg" />
+    <Content Include="Css\bootstrap-grid.css" />
+    <Content Include="Css\bootstrap-grid.min.css" />
+    <Content Include="Css\bootstrap-reboot.css" />
+    <Content Include="Css\bootstrap-reboot.min.css" />
+    <Content Include="Css\bootstrap.css" />
+    <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\CMS.css" />
+    <Content Include="Css\CMSCSSMAIN.css" />
+    <Content Include="Css\LoginStyles.css" />
+    <Content Include="Global.asax" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\src\bootstrap-filestyle.js" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\src\bootstrap-filestyle.min.js" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\css\bootstrap.min.css" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\index.html" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\js\bootstrap.min.js" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\open-iconic\font\css\open-iconic-bootstrap.css" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\open-iconic\font\fonts\open-iconic.svg" />
+    <Content Include="scripts\bootstrap.bundle.js" />
+    <Content Include="scripts\bootstrap.bundle.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\navbar.js" />
+    <Content Include="scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="scripts\tinymce\license.txt" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\help\img\logo.png" />
+    <Content Include="scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.mobile.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\skin.mobile.min.css" />
+    <Content Include="scripts\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="scripts\tinymce\themes\mobile\theme.min.js" />
+    <Content Include="scripts\tinymce\themes\modern\theme.min.js" />
+    <Content Include="scripts\tinymce\tinymce.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\CMS\CMSAreaRegistration.cs" />
+    <Compile Include="Areas\CMS\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
+    <Compile Include="Areas\CMS\Controllers\UserController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\FileTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Shared\_CmsLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Article.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
+    <Content Include="Areas\CMS\Views\web.config" />
+    <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Article\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Article\AddNew.cshtml" />
+    <Content Include="Areas\CMS\Views\Article\Edit.cshtml" />
+    <Content Include="Areas\CMS\Views\User\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\User\AddNew.cshtml" />
+    <Content Include="Areas\CMS\Views\User\Edit.cshtml" />
+    <Content Include="scripts\tinymce\langs\readme.md" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-mobile.woff" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="scripts\bootstrap.bundle.js.map" />
+    <Content Include="scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="scripts\bootstrap.js.map" />
+    <Content Include="scripts\bootstrap.min.js.map" />
+    <Content Include="Css\bootstrap-grid.css.map" />
+    <Content Include="Css\bootstrap-grid.min.css.map" />
+    <Content Include="Css\bootstrap-reboot.css.map" />
+    <Content Include="Css\bootstrap-reboot.min.css.map" />
+    <Content Include="Css\bootstrap.css.map" />
+    <Content Include="Css\bootstrap.min.css.map" />
+    <Content Include="Views\Shared\_LoginMain.cshtml" />
+    <Content Include="Views\Shared\_AdministratorLinks.cshtml" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\bootstrap-filestyle.jquery.json" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\bower.json" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\composer.json" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\LICENSE-MIT" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\package.json" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\README.md" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\open-iconic\font\fonts\open-iconic.eot" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\open-iconic\font\fonts\open-iconic.otf" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\open-iconic\font\fonts\open-iconic.ttf" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\open-iconic\font\fonts\open-iconic.woff" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\upload.php" />
+    <Content Include="scripts\bootstrap-filestyle-2.1.0\test\upload\.folder" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\CMS\Models\" />
+    <Folder Include="Areas\CMS\Views\Shared\" />
+    <Folder Include="ArticleImages\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TinyRepo\TinyRepo.csproj">
+      <Project>{84383806-c7c3-4730-a624-824946919069}</Project>
+      <Name>TinyRepo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53095</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53095/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

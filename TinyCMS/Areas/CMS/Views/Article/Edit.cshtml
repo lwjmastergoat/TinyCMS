@@ -1,0 +1,52 @@
+﻿@using TinyRepo.Models
+@model Articles
+
+
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CmsLayout.cshtml";
+}
+
+<h1 class="text-center">Edit @Model.Headline</h1>
+<hr />
+
+
+<form method="post" action="/CMS/Article/Edit/" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="headlineh2">Headline</h2>
+                <br />
+                <input type="text" name="Headline" class="inputs hdinput" value="@Model.Headline" />
+                <br />
+                <h2>Article Text</h2>
+                <br />
+                <textarea class="inputs" name="Main">@Model.Main</textarea>
+            </div>
+            <div class="col-sm-6">
+                <h2>New Picture</h2>
+                <br />
+                <input type="file" class="roleselect" name="Photo" />
+                <br />
+                <input type="hidden" value="@Model.ID" name="ID" />
+                <br />
+
+
+                @if (Model.Image != null)
+                {
+                    <h2 class="currentimg"> Current Picture </h2>
+                    <img src="~/ArticleImages/@Model.Image" width="300" />
+                    <br />
+                    
+                }
+
+            </div>
+
+            <div class="col-sm-12">
+                <button type="submit">Edit Article</button>
+            </div>
+        </div>
+    </div>
+</form>
+

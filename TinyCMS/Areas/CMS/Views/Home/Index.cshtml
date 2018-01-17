@@ -1,0 +1,58 @@
+﻿@*CMS INDEX*@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CmsLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center">Administration Panel</h1>
+            <hr class="adminhr"/>
+        </div>
+        <div class="col-sm-3">
+            @if ((int)Session["role"] >= 3)
+            {
+                <a href="/CMS/User/">
+                    <div class="viewbox">
+                        <div class="text-center imgdiv"><i class="fa fa-user fa-5x"></i></div>
+                        <h4 class="text-center">Users</h4>
+                    </div>
+                </a>
+            }
+        </div>
+        <div class="col-sm-3">
+            @if ((int)Session["role"] >= 1)
+            {
+                <a href="/CMS/Article/">
+                    <div class="viewbox">
+                        <div class="text-center imgdiv"><i class="fa fa-file-text fa-5x"></i></div>
+                        <h4 class="text-center">Articles</h4>
+                    </div>
+                </a>
+            }
+        </div>
+        <div class="col-sm-3">
+            @if ((int)Session["role"] >= 3)
+            {
+                <a href="#">
+                    <div class="viewbox">
+                        <div class="text-center imgdiv"><i class="fa fa-user fa-5x"></i></div>
+                        <h4 class="text-center">Coming Soon</h4>
+                    </div>
+                </a>
+            }
+        </div>
+        <div class="col-sm-3">
+            @if ((int)Session["role"] >= 3)
+            {
+                <a href="#">
+                    <div class="viewbox">
+                        <div class="text-center imgdiv"><i class="fa fa-user fa-5x"></i></div>
+                        <h4 class="text-center">Coming Soon</h4>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>

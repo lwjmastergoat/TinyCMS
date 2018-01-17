@@ -1,0 +1,23 @@
+﻿@*CMS ARTICLE ADDNEW*@
+
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_CmsLayout.cshtml";
+}
+
+<h1>Tilføj Artikel</h1>
+<form method="post" action="/CMS/Article/AddNew/" enctype="multipart/form-data">
+    <label>Overskrift</label>
+    <br />
+    <input type="text" name="Headline" />
+    <br />
+    <label>Brødtekst</label>
+    <br />
+    <textarea name="Main"></textarea>
+    <br />
+    <label>Billed</label>
+    <br />
+    <input type="file" name="Photo" />
+    <br />
+    <button type="submit">Opret artikel</button>
+</form>

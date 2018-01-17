@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Css/bootstrap.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+    <div>
+        @Html.Partial("_Login")
+        <hr />
+        @RenderBody()
+    </div>
+
+    <script src="~/scripts/bootstrap.js"></script>
+</body>
+</html>

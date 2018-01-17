@@ -1,0 +1,16 @@
+﻿@if ((int)Session["role"] >= 3)
+{
+    <a href="/CMS/User/">
+        <span class="fa fa-user nb-link-icon"></span>
+        <span class="nb-link-text">Users</span>
+    </a>
+}
+
+@if ((int)Session["role"] >= 1)
+{
+    <a href="/CMS/Article/">
+        <span class="fa fa-file-text nb-link-icon"></span>
+        <span class="nb-link-text">Articles</span>
+    </a>
+}
+

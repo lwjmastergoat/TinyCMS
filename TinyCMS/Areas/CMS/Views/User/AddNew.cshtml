@@ -1,0 +1,29 @@
+﻿
+
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_CmsLayout.cshtml";
+}
+
+<h1 class="text-center">Add User</h1>
+<hr />
+
+<div class="loginwrap d-block mx-auto">
+    <form method="post" action="/CMS/User/AddNew/" enctype="multipart/form-data" class="text-center">
+        <label class="pushdown">Brugernavn</label>
+        <br />
+        <input type="text" name="Username" class="inputs" />
+        <br />
+        <label>Password</label>
+        <br />
+        <input type="password" name="Password"  class="inputs"/>
+        <br />
+        <select name="Role" class="roleselect" >
+            <option disabled selected>Vælg Rolle</option>
+            <option value="1">Writer</option>
+            <option value="2">Editor</option>
+            <option value="3">Admin</option>
+        </select>
+        <button type="submit" class="btn alert-primary redigerbtn"> Add User </button>
+    </form>
+ </div>

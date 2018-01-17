@@ -1,0 +1,23 @@
+﻿@using TinyRepo.Models
+@model ArticleUser
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1>@Model.Headline</h1>
+
+@if (Model.Image != null)
+{
+    <img src="~/ArticleImages/@Model.Image" alt="@Model.Headline" />
+}
+
+<i>
+    Skrevet af @(Model.Username != null ? Model.Username : "HEST")
+    den @Model.Date.ToLongDateString() kl: @Model.Date.ToShortTimeString()
+</i>
+<hr />
+
+<p>@Html.Raw(Model.Main)</p>
+<hr />
+<a href="/">Tilbage</a>

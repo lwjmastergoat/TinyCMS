@@ -1,0 +1,30 @@
+﻿@using TinyRepo.Models
+@model Users
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CmsLayout.cshtml";
+}
+
+<h1 class="text-center">Rediger Bruger @Model.Username</h1>
+<hr />
+
+<div class="loginwrap d-block mx-auto">
+    <form method="post" action="/CMS/User/Edit" class="text-center">
+        <label class="pushdown"><b class="">Brugernavn</b></label>
+        <br />
+        <input type="text" name="Username" class="inputs" value="@Model.Username" />
+        <br />
+        <label><b>Kodeord</b></label>
+        <br />
+        <input type="password" name="Password" class="inputs" value="@Model.Password" />
+        <br />
+        <select class="roleselect" name="Role" @(Model.ID == (int)Session["id"] ? "disabled" : null)>
+
+            <option value="1" @(Model.Role == 1 ? "selected" : null)>Writer</option>
+            <option value="2" @(Model.Role == 2 ? "selected" : null)>Editor</option>
+            <option value="3" @(Model.Role == 3 ? "selected" : null)>Admin</option>
+        </select>
+        <button type="submit" class="btn alert-primary redigerbtn" name="Submit">Rediger</button>
+        <input type="hidden" value="@Model.ID" name="ID" />
+    </form>
+</div>

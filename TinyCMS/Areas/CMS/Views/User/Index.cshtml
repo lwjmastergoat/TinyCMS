@@ -1,0 +1,68 @@
+﻿@*CMD USER INDEX*@
+@using TinyRepo.Models
+@model List<Users>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CmsLayout.cshtml";
+}
+
+<h1 class="text-center">User Administration</h1>
+<hr />
+
+
+
+<table class="">
+    <thead>
+        <tr>
+            <td><b>Username</b></td>
+            <td><b>Role</b></td>
+            <td><a href="/CMS/User/AddNew"><button class="btn alert-info">Add User</button></a></td>
+            <td></td>
+        </tr>
+
+    <tbody>
+        @foreach (Users user in Model)
+        {
+            <tr>
+                <td class="username"> @user.Username</td>
+                <td class="role">@DisplayRole(user.Role.Value)</td>
+                <td class="remove">
+                    @if ((int)Session["id"] != user.ID)
+                    {
+                        <a href="/CMS/User/Delete/@user.ID"><button class="btn alert-danger">Remove</button></a>
+                    }
+
+                </td>
+
+                <td class="edit"><a href="/CMS/User/Edit/@user.ID"><button class="btn alert-primary">Edit</button></a></td>
+
+
+            </tr>
+            
+        }
+
+    </tbody>
+</table>
+
+
+@helper DisplayRole(int? role)
+{
+if (role == 1)
+{
+        <text>Writer</text>
+}
+else if (role == 2)
+{
+        <text>Editor</text>
+}
+else if (role == 3)
+{
+        <text>Admin</text>
+}
+else
+{
+        <text>You aren't in a UserGroup </text>
+}
+}

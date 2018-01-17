@@ -1,0 +1,22 @@
+﻿@*HOME INDEX*@
+@using TinyRepo.Models
+@model List<ArticleUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1>Artikler</h1>
+
+@foreach (ArticleUser article in Model)
+{
+    <h2>@article.Headline</h2>
+    <p>
+        <a href="/Home/Article/@article.ID">læs artikel</a>
+        <br />
+        <i>
+            Skrevet den @article.Date.ToLongDateString() af @(article.Username != null ? article.Username : "HEST")
+        </i>
+    </p>
+    <hr />
+}

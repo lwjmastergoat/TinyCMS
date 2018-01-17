@@ -1,0 +1,19 @@
+﻿@if (Session["id"] == null)
+{
+    <a href="/Login/">Login</a>
+}
+else
+{
+    <a href="/Login/Logout">
+        <span class="fa fa-sign-out nb-link-icon"></span>
+        <span class="nb-link-text">Sign Out</span>
+    </a>
+
+    <a href="/CMS">
+        <span class="fa fa-wrench nb-link-icon"></span>
+        <span class="nb-link-text">Admin Panel</span>
+    </a>
+    <span>UserID</span> @Session["id"]
+
+    <span>Role</span> @Session["role"]
+}
